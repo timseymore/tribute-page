@@ -1,0 +1,148 @@
+:root {
+  --back-drop: rgb(215, 215, 225);
+  --timeline: rgb(200, 200, 200);
+}
+
+body {
+  background: rgb(25, 25, 25);  
+}
+
+#main {
+  display: grid;
+  grid-template-areas: 
+    "title"
+    "image"
+    "content"
+    "footer";
+  font-size: 10px;
+  background: var(--back-drop);
+  border-radius: 5px;
+}
+
+#title-div {
+  grid-area: title;
+  justify-self: center;
+  margin: 0px 0px 50px 0px;
+  text-align: center;
+}
+
+#title {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 2.4rem;
+  margin: 5px;
+}
+
+h2 {  
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 1.1rem;
+  text-align: center;
+  margin: 0px 10px 0px 10px;
+}
+
+#img-div {
+  grid-area: image;
+  justify-self: center;
+  margin: 50px;
+}
+
+#image {
+  max-height: 500px;
+  max-width: 100%;
+  display: block;
+  height: auto;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+#img-caption {
+  font-family: 'Times New Roman', Times, serif;
+  font-style: italic;
+  margin: 5px;
+}
+
+#tribute-info {
+  grid-area: content;
+  justify-self: center;
+  display: grid;
+  grid-template-areas:     
+    "title"    
+    "timeline"
+    "image"
+    "caption"
+    "bio";
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 1.3rem;
+  margin: 20px;
+  max-width: 900px;  
+}
+
+#bio {
+  grid-area: bio;
+  margin: 50px 0px 50px;
+  text-align: center;
+}
+
+#timeline-title {
+  grid-area: title;
+  justify-self: center;
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin: auto;
+  text-align: center;  
+}
+
+ul {
+  grid-area: timeline;
+  justify-self: center;
+  font-size: 1.2rem;
+  font-family: 'Times New Roman', Times, serif;
+  margin: 20px;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  background: var(--timeline);
+}
+
+li {
+  margin: 10px;
+}
+
+#bottom-img {
+  grid-area: image;
+  justify-self: center;
+  max-height: 650px; 
+  max-width: 100%;
+  display: block;
+  height: auto;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+#btm-img-caption {
+  grid-area: caption;
+  margin: 5px auto 20px;
+  font-family: 'Times New Roman', Times, serif;
+  font-style: italic;
+  font-size: 1.1rem;
+}
+
+#tribute-end {
+  grid-area: footer;
+  justify-self: center; 
+  font-size: 1.3rem;
+  font-weight: bold;
+  text-align: center;
+  margin: 0px 0px 10px 0px;
+}
+
+#tribute-link {
+  color: blue;
+}
+
+@media (max-width: 300px) {
+  #image {
+    max-height: 250px;
+  }
+  
+  #bottom-img {
+    max-height: 450px;
+    
+  }
+}
